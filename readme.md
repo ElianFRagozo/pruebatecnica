@@ -53,7 +53,7 @@ uvicorn main:app --reload
 1. Clonar el repositorio:
 
 ```bash
-git clone https://github.com/tu-usuario/user-api.git
+git clone https://github.com/ElianFRagozo/pruebatecnica.git
 cd user-api
 ```
 
