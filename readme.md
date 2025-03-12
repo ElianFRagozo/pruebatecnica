@@ -24,8 +24,8 @@ Este proyecto es una API RESTful desarrollada con FastAPI y MongoDB que permite 
 1. Clonar el repositorio:
 
 ```bash
-git clone https://github.com/tu-usuario/user-api.git
-cd user-api
+git clone https://github.com/ElianFRagozo/pruebatecnica.git
+cd pruebatecnica
 ```
 
 2. Crear un entorno virtual e instalar dependencias:
@@ -66,7 +66,7 @@ docker build -t user-api .
 3. Ejecutar el contenedor:
 
 ```bash
-docker run -p 8000:8000 -e MONGODB_URI="tu_url_de_mongodb" user-api
+docker run -p 8000:8000 user-api
 ```
 
 ## Endpoints de la API
