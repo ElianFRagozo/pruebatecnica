@@ -19,10 +19,18 @@ app.add_middleware(
 )
 
 # MongoDB connection
-MONGODB_URL = os.getenv("MONGODB_URL", "mongodb+srv://eenriquefragozo:J13TUz6miYIRJ3lj@cluster0.1f2qb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-client = AsyncIOMotorClient(MONGODB_URL)
-db = client.user_database
-user_collection = db.users
+MONGODB_URL = os.getenv("MONGODB_URI", "mongodb+srv://eenriquefragozo:J13TUz6miYIRJ3lj@cluster0.1f2qb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+
+try:
+    client = AsyncIOMotorClient(MONGODB_URL)
+    # Ping the server to confirm connection
+    client.admin.command('ping')
+    print("Connected successfully to MongoDB!")
+    db = client.user_database
+    user_collection = db.users
+except Exception as e:
+    print(f"Error connecting to MongoDB: {e}")
+    raise
 
 # User model
 class User(BaseModel):
@@ -71,7 +79,5 @@ async def get_users():
         })
     return users
 
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+app = app
 
