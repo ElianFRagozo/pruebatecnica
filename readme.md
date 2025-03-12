@@ -186,8 +186,7 @@ Este proyecto está licenciado bajo la Licencia MIT - ver el archivo LICENSE par
 
 ## Autor
 
-Tu Nombre - tu-email@example.com
-
+Elian Fragozo Ruiz - elianenriquefragozoruiz@gmail.com
 ## Contribuciones
 
 Las contribuciones son bienvenidas. Por favor, abre un issue primero para discutir lo que te gustaría cambiar.

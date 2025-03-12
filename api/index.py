@@ -18,8 +18,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# MongoDB connection
-MONGODB_URL = os.getenv("MONGODB_URI", "mongodb+srv://eenriquefragozo:J13TUz6miYIRJ3lj@cluster0.1f2qb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+# Replace your hardcoded connection string with:
+MONGODB_URL = os.getenv("MONGODB_URI")
 
 try:
     client = AsyncIOMotorClient(MONGODB_URL)
